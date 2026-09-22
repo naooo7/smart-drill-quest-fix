@@ -248,15 +248,16 @@ function QuestionPage() {
                 type="button"
                 onClick={() => !submitted && setSelected(choice)}
                 className={cn(
-                  "flex w-full items-center gap-4 rounded-2xl border bg-card p-4 text-left transition-all",
-                  !submitted && !chosen && "border-border hover:-translate-y-0.5 hover:border-primary hover:shadow-soft",
-                  !submitted && chosen && "border-primary bg-accent",
-                  submitted && isCorrect && "border-success bg-success-soft",
-                  submitted && chosen && !isCorrect && "border-destructive bg-danger-soft",
-                  submitted && !chosen && !isCorrect && "border-border opacity-55",
+                  "flex w-full items-center gap-4 rounded-2xl border bg-card p-4 text-left text-answer-default transition-all",
+                  !submitted && !chosen && "border-border hover:-translate-y-0.5 hover:border-primary hover:bg-answer-hover hover:text-answer-hover-foreground hover:shadow-soft",
+                  !submitted && chosen && "border-answer-selected-border bg-answer-selected text-answer-selected-foreground",
+                  submitted && isCorrect && "border-answer-correct-border bg-answer-correct text-answer-correct-foreground",
+                  submitted && chosen && !isCorrect && "border-answer-incorrect-border bg-answer-incorrect text-answer-incorrect-foreground",
+                  submitted && !chosen && !isCorrect && "border-border bg-answer-disabled text-answer-disabled-foreground",
                 )}
+                disabled={submitted}
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-background font-semibold">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-current bg-background/80 font-semibold text-inherit">
                   {String.fromCharCode(65 + choice)}
                 </span>
                 <span className="font-medium">{option}</span>

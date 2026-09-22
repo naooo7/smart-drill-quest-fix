@@ -163,6 +163,20 @@
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
   --color-danger-soft: var(--danger-soft);
+  --color-answer-default: var(--answer-default);
+  --color-answer-hover: var(--answer-hover);
+  --color-answer-hover-foreground: var(--answer-hover-foreground);
+  --color-answer-selected: var(--answer-selected);
+  --color-answer-selected-foreground: var(--answer-selected-foreground);
+  --color-answer-selected-border: var(--answer-selected-border);
+  --color-answer-correct: var(--answer-correct);
+  --color-answer-correct-foreground: var(--answer-correct-foreground);
+  --color-answer-correct-border: var(--answer-correct-border);
+  --color-answer-incorrect: var(--answer-incorrect);
+  --color-answer-incorrect-foreground: var(--answer-incorrect-foreground);
+  --color-answer-incorrect-border: var(--answer-incorrect-border);
+  --color-answer-disabled: var(--answer-disabled);
+  --color-answer-disabled-foreground: var(--answer-disabled-foreground);
 }
 
 @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
