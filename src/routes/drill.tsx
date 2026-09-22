@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { Check, SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -63,4 +63,4 @@ function DrillPage() {
   </Page>;
 }
 function Step({ n, title, compact = false }: { n: string; title: string; compact?: boolean }) { return <div className={cn("flex items-center gap-3", !compact && "mb-5")}><span className="flex h-7 w-7 items-center justify-center rounded-full bg-secondary text-xs font-bold text-muted-foreground">{n}</span><h2 className="font-display text-lg font-bold">{title}</h2></div>; }
-function Setting({ title, children }: { title: string; children: React.ReactNode }) { return <div><h3 className="mb-3 text-sm font-semibold text-muted-foreground">{title}</h3>{children}</div>; }
+function Setting({ title, children }: { title: string; children: ReactNode }) { return <div><h3 className="mb-3 text-sm font-semibold text-muted-foreground">{title}</h3>{children}</div>; }
